@@ -52,7 +52,7 @@ const computeD12 = async() => {
                         } else {
                             secondDigit = 1;
                         }
-                        charIndex += 2;
+                        charIndex += 1;
                     }
                 } else if (chars[charIndex] === "t") {
                     if (chars[charIndex+1] === "w" && chars[charIndex+2] === "o") {
@@ -63,7 +63,7 @@ const computeD12 = async() => {
                         } else {
                             secondDigit = "2";
                         }
-                        charIndex += 2;
+                        charIndex += 1;
                     } else if (chars[charIndex+1] === "h" && chars[charIndex+2] === "r" && chars[charIndex+3] === "e" && chars[charIndex+4] === "e") {
                         if (isFirstOccurence) {
                             firstDigit = "3";
@@ -72,7 +72,7 @@ const computeD12 = async() => {
                         } else {
                             secondDigit = "3";
                         }
-                        charIndex += 4;
+                        charIndex += 3;
                     }
                 } else if (chars[charIndex] === "f") {
                     if (chars[charIndex+1] === "i" && chars[charIndex+2] === "v" && chars[charIndex+3] === "e") {
@@ -83,7 +83,7 @@ const computeD12 = async() => {
                         } else {
                             secondDigit = "5";
                         }
-                        charIndex += 3;
+                        charIndex += 2;
                     } else if (chars[charIndex+1] === "o" && chars[charIndex+2] === "u" && chars[charIndex+3] === "r") {
                         if (isFirstOccurence) {
                             firstDigit = "4";
@@ -92,7 +92,7 @@ const computeD12 = async() => {
                         } else {
                             secondDigit = "4";
                         }
-                        charIndex += 3;
+                        charIndex += 2;
                     }
                 } else if (chars[charIndex] === "s") {
                     if (chars[charIndex+1] === "i" && chars[charIndex+2] === "x") {
@@ -103,7 +103,7 @@ const computeD12 = async() => {
                         } else {
                             secondDigit = "6";
                         }
-                        charIndex += 2;
+                        charIndex += 1;
                     } else if (chars[charIndex+1] === "e" && chars[charIndex+2] === "v" && chars[charIndex+3] === "e" && chars[charIndex+4] === "n") {
                         if (isFirstOccurence) {
                             firstDigit = "7";
@@ -112,7 +112,7 @@ const computeD12 = async() => {
                         } else {
                             secondDigit = "7";
                         }
-                        charIndex += 4;
+                        charIndex += 3;
                     }
                 } else if (chars[charIndex] === "e") {
                     if (chars[charIndex+1] === "i" && chars[charIndex+2] === "g" && chars[charIndex+3] === "h" && chars[charIndex+4] === "t") {
@@ -123,7 +123,7 @@ const computeD12 = async() => {
                         } else {
                             secondDigit = "8";
                         }
-                        charIndex += 4;
+                        charIndex += 3;
                     } 
                 } else if (chars[charIndex] === "n") {
                     if (chars[charIndex+1] === "i" && chars[charIndex+2] === "n" && chars[charIndex+3] === "e") {
@@ -134,7 +134,7 @@ const computeD12 = async() => {
                         } else {
                             secondDigit = "9";
                         }
-                        charIndex +=3;
+                        charIndex +=2;
                     } 
                 }
             }
