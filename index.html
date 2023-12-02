@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Advent Of Code 2023</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <script src="JS\Day1.js"></script>
-    </head>
-    <body>
-        <button type="button" name="btnQ1" onclick="runD1()">Run Day 1</button>
-        <label for="iD1FInputFile">Input file to resolve</label>
-        <input id="iD1FInputFile" name="iD1FInputFile" type="file" onchange="populateTextD1()" />
-        <label for="iD11">Day 1.1 Response</label>
-        <input id="iD11" name="iD11" type="text" readonly />
-        <label for="iD12">Day 1.2 Response</label>
-        <input id="iD12" name="iD12" type="text" readonly />
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Advent Of Code 2023</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script src="JS\Day1.js"></script>
+    <script src="JS\Day2.js"></script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><button type="button" name="btnQ1" onclick="runD1()">Run Day 1</button></td>
+            <td><label for="iD1FInputFile">Input file (Day 1) to resolve</label></td>
+            <td><input id="iD1FInputFile" name="iD1FInputFile" type="file" onchange="populateTextD1()" /></td>
+            <td><label for="iD11">Day 1.1 Response</label></td>
+            <td><input id="iD11" name="iD11" type="text" readonly /></td>
+            <td><label for="iD12">Day 1.2 Response</label></td>
+            <td><input id="iD12" name="iD12" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><button type="button" name="btnQ2" onclick="runD2()">Run Day 2</button></td>
+            <td><label for="iD2FInputFile">Input file (Day 2) to resolve</label></td>
+            <td><input id="iD2FInputFile" name="iD2FInputFile" type="file" onchange="populateTextD2()" /></td>
+            <td><label for="iD21">Day 2.1 Response</label></td>
+            <td><input id="iD21" name="iD21" type="text" readonly /></td>
+            <td><label for="iD22">Day 2.2 Response</label></td>
+            <td><input id="iD22" name="iD22" type="text" readonly /></td>
+        </tr>
+    </table>
+</body>
+
 </html>

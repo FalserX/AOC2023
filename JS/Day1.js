@@ -1,12 +1,11 @@
 let resultD11;
 let resultD12;
-let fr = new FileReader();
 let textFile;
-const computeD11 = async() => {
+const computeD11 = async () => {
     let isFirstOccurence = true;
     const lines = textFile.split('\r\n');
     let currentDigits = [];
-    lines.map((line) => { 
+    lines.map((line) => {
         let chars = Array.from(line);
         let firstDigit = 0;
         let secondDigit = 0;
@@ -19,19 +18,19 @@ const computeD11 = async() => {
                 secondDigit = char;
             }
         }
-        currentDigits.push(Number(firstDigit+secondDigit));
+        currentDigits.push(Number(firstDigit + secondDigit));
         isFirstOccurence = true;
     });
     return currentDigits.reduce((a, b) => {
         return a + b;
-      }, 0);
+    }, 0);
 }
-const computeD12 = async() => {
+const computeD12 = async () => {
 
     let isFirstOccurence = true;
     const lines = textFile.split('\r\n');
     let currentDigits = [];
-    lines.map((line) => { 
+    lines.map((line) => {
         let chars = Array.from(line);
         let firstDigit = 0;
         let secondDigit = 0;
@@ -44,7 +43,7 @@ const computeD12 = async() => {
                 secondDigit = chars[charIndex];
             } else {
                 if (chars[charIndex] === "o") {
-                    if (chars[charIndex+1] === "n" && chars[charIndex+2] === "e") {
+                    if (chars[charIndex + 1] === "n" && chars[charIndex + 2] === "e") {
                         if (isFirstOccurence) {
                             firstDigit = "1";
                             secondDigit = "1";
@@ -55,7 +54,7 @@ const computeD12 = async() => {
                         charIndex += 1;
                     }
                 } else if (chars[charIndex] === "t") {
-                    if (chars[charIndex+1] === "w" && chars[charIndex+2] === "o") {
+                    if (chars[charIndex + 1] === "w" && chars[charIndex + 2] === "o") {
                         if (isFirstOccurence) {
                             firstDigit = "2";
                             secondDigit = "2";
@@ -64,7 +63,7 @@ const computeD12 = async() => {
                             secondDigit = "2";
                         }
                         charIndex += 1;
-                    } else if (chars[charIndex+1] === "h" && chars[charIndex+2] === "r" && chars[charIndex+3] === "e" && chars[charIndex+4] === "e") {
+                    } else if (chars[charIndex + 1] === "h" && chars[charIndex + 2] === "r" && chars[charIndex + 3] === "e" && chars[charIndex + 4] === "e") {
                         if (isFirstOccurence) {
                             firstDigit = "3";
                             secondDigit = "3";
@@ -75,7 +74,7 @@ const computeD12 = async() => {
                         charIndex += 3;
                     }
                 } else if (chars[charIndex] === "f") {
-                    if (chars[charIndex+1] === "i" && chars[charIndex+2] === "v" && chars[charIndex+3] === "e") {
+                    if (chars[charIndex + 1] === "i" && chars[charIndex + 2] === "v" && chars[charIndex + 3] === "e") {
                         if (isFirstOccurence) {
                             firstDigit = "5";
                             secondDigit = "5";
@@ -84,7 +83,7 @@ const computeD12 = async() => {
                             secondDigit = "5";
                         }
                         charIndex += 2;
-                    } else if (chars[charIndex+1] === "o" && chars[charIndex+2] === "u" && chars[charIndex+3] === "r") {
+                    } else if (chars[charIndex + 1] === "o" && chars[charIndex + 2] === "u" && chars[charIndex + 3] === "r") {
                         if (isFirstOccurence) {
                             firstDigit = "4";
                             secondDigit = "4";
@@ -95,7 +94,7 @@ const computeD12 = async() => {
                         charIndex += 2;
                     }
                 } else if (chars[charIndex] === "s") {
-                    if (chars[charIndex+1] === "i" && chars[charIndex+2] === "x") {
+                    if (chars[charIndex + 1] === "i" && chars[charIndex + 2] === "x") {
                         if (isFirstOccurence) {
                             firstDigit = "6";
                             secondDigit = "6";
@@ -104,7 +103,7 @@ const computeD12 = async() => {
                             secondDigit = "6";
                         }
                         charIndex += 1;
-                    } else if (chars[charIndex+1] === "e" && chars[charIndex+2] === "v" && chars[charIndex+3] === "e" && chars[charIndex+4] === "n") {
+                    } else if (chars[charIndex + 1] === "e" && chars[charIndex + 2] === "v" && chars[charIndex + 3] === "e" && chars[charIndex + 4] === "n") {
                         if (isFirstOccurence) {
                             firstDigit = "7";
                             secondDigit = "7";
@@ -115,7 +114,7 @@ const computeD12 = async() => {
                         charIndex += 3;
                     }
                 } else if (chars[charIndex] === "e") {
-                    if (chars[charIndex+1] === "i" && chars[charIndex+2] === "g" && chars[charIndex+3] === "h" && chars[charIndex+4] === "t") {
+                    if (chars[charIndex + 1] === "i" && chars[charIndex + 2] === "g" && chars[charIndex + 3] === "h" && chars[charIndex + 4] === "t") {
                         if (isFirstOccurence) {
                             firstDigit = "8";
                             secondDigit = "8";
@@ -124,9 +123,9 @@ const computeD12 = async() => {
                             secondDigit = "8";
                         }
                         charIndex += 3;
-                    } 
+                    }
                 } else if (chars[charIndex] === "n") {
-                    if (chars[charIndex+1] === "i" && chars[charIndex+2] === "n" && chars[charIndex+3] === "e") {
+                    if (chars[charIndex + 1] === "i" && chars[charIndex + 2] === "n" && chars[charIndex + 3] === "e") {
                         if (isFirstOccurence) {
                             firstDigit = "9";
                             secondDigit = "9";
@@ -134,25 +133,25 @@ const computeD12 = async() => {
                         } else {
                             secondDigit = "9";
                         }
-                        charIndex +=2;
-                    } 
+                        charIndex += 2;
+                    }
                 }
             }
         }
-        currentDigits.push(Number(firstDigit+secondDigit));
+        currentDigits.push(Number(firstDigit + secondDigit));
         isFirstOccurence = true;
     });
     return currentDigits.reduce((a, b) => {
         return a + b;
-      }, 0);
+    }, 0);
 }
 
-const populateTextD1 = async() => {
+const populateTextD1 = async () => {
     const inputFile = document.getElementById("iD1FInputFile");
     textFile = await inputFile.files[0].text();
 }
 
-const runD1 = async() => {
+const runD1 = async () => {
     resultD11 = await computeD11();
     resultD12 = await computeD12();
     const day11Input = document.getElementById("iD11");
