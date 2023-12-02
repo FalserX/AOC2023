@@ -4,9 +4,9 @@ let textFile2;
 const RED_COUNT = 12;
 const GREEN_COUNT = 13;
 const BLUE_COUNT = 14;
-let red_current_count = 0;
-let green_current_count = 0;
-let blue_current_count = 0;
+let max_few_red_current_count = 0;
+let max_few_green_current_count = 0;
+let max_few_blue_current_count = 0;
 let currentGames = {};
 const computeD21 = async () => {
     const lines = textFile2.split('\r\n');
@@ -43,46 +43,38 @@ const computeD21 = async () => {
     return sum;
 }
 const computeD22 = async () => {
+    let result = 0;
     const lines = textFile2.split('\r\n');
     lines.map((line) => {
-        let isFirstOccurence = true;
         const currentId = line.substring("Game".length + 1, line.indexOf(':')).trimStart();
         line = line.substring(line.indexOf(':') + 1);
         const parties = line.split(';');
         parties.map((party) => {
             const take = party.split(',');
-            let b = false;
-            let g = false;
-            let r = false;
             take.map((t) => {
                 const l = t.split(" ");
                 const s = l.filter((str) => str !== '');
-                const value = s[0];
+                const value = Number(s[0]);
                 const block = s[1];
-                if (block === "blue" && (isFirstOccurence || value < blue_current_count)) {
-                    blue_current_count = value;
-                    b = true;
-                } else if (block === "red" && (isFirstOccurence || value < red_current_count)) {
-                    red_current_count = value;
-                    r = true;
-                } else if (block === "green" && (isFirstOccurence || value < green_current_count)) {
-                    green_current_count = value;
-                    g = true;
-                }
-                if (!g) {
-                    green_current_count = 0;
-                } else if (!r) {
-                    red_current_count = 0;
-                } else if (!b) {
-                    blue_current_count = 0;
+                if (block === "blue" && value > max_few_blue_current_count) {
+                    max_few_blue_current_count = value;
+                } else if (block === "red" && value > max_few_red_current_count) {
+                    max_few_red_current_count = value;
+                } else if (block === "green" && value > max_few_green_current_count) {
+                    max_few_green_current_count = value;
                 }
             });
-            isFirstOccurence = false;
         });
-        console.log(`[${currentId}]: { "red": ${red_current_count}, "green": ${green_current_count}, "blue": ${blue_current_count} }`);
-        currentGames[currentId] = { "red": red_current_count, "green": green_current_count, "blue": blue_current_count };
-
-    })
+        currentGames[currentId] = { "red": max_few_red_current_count, "green": max_few_green_current_count, "blue": max_few_blue_current_count };
+        max_few_red_current_count = 0;
+        max_few_blue_current_count = 0;
+        max_few_green_current_count = 0;
+    });
+    Object.entries(currentGames).map((currentGame) => {
+        const valuesGame = currentGame[1];
+        result += Number(valuesGame["red"]) * Number(valuesGame["green"]) * Number(valuesGame["blue"]);
+    });
+    return result;
 }
 
 const populateTextD2 = async () => {
