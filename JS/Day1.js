@@ -3,7 +3,7 @@ let resultD12;
 let textFile;
 const computeD11 = async () => {
     let isFirstOccurence = true;
-    const lines = textFile.split('\r\n');
+    const lines = textFile.replace(/\r/g, '').split('\n');
     let currentDigits = [];
     lines.map((line) => {
         let chars = Array.from(line);
@@ -28,7 +28,7 @@ const computeD11 = async () => {
 const computeD12 = async () => {
 
     let isFirstOccurence = true;
-    const lines = textFile.split('\r\n');
+    const lines = textFile.replace(/\r/g, '').split('\n');
     let currentDigits = [];
     lines.map((line) => {
         let chars = Array.from(line);

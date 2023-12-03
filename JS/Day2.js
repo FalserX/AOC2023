@@ -9,7 +9,7 @@ let max_few_green_current_count = 0;
 let max_few_blue_current_count = 0;
 let currentGames = {};
 const computeD21 = async () => {
-    const lines = textFile2.split('\r\n');
+    const lines = textFile2.replace(/\r/g, '').split('\n');
     lines.map((line) => {
         let ok = true;
         const currentId = line.substring("Game".length + 1, line.indexOf(':')).trimStart();
@@ -44,7 +44,7 @@ const computeD21 = async () => {
 }
 const computeD22 = async () => {
     let result = 0;
-    const lines = textFile2.split('\r\n');
+    const lines = textFile2.replace(/\r/g, '').split('\n');
     lines.map((line) => {
         const currentId = line.substring("Game".length + 1, line.indexOf(':')).trimStart();
         line = line.substring(line.indexOf(':') + 1);

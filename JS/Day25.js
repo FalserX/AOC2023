@@ -3,14 +3,14 @@ let resultD252;
 let textFile25;
 const computeD251 = async () => {
     let result = 0;
-    const lines = textFile25.split('\r\n');
+    const lines = textFile25.replace(/\r/g, '').split('\n');
     lines.map((line) => {
     });
     return result;
 }
 const computeD252 = async () => {
     let result = 0;
-    const lines = textFile25.split('\r\n');
+    const lines = textFile25.replace(/\r/g, '').split('\n');
     lines.map((line) => {
 
     });
