@@ -5,34 +5,236 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Advent Of Code 2023</title>
-    <meta name="description" content="">
+    <meta name="description" content="Interpretation of results of Advent of code 2023 by FalserX">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/defaultStyle.css">
     <script src="JS\Day1.js"></script>
     <script src="JS\Day2.js"></script>
+    <script src="JS\Day3.js"></script>
+    <script src="JS\Day4.js"></script>
+    <script src="JS\Day5.js"></script>
+    <script src="JS\Day6.js"></script>
+    <script src="JS\Day7.js"></script>
+    <script src="JS\Day8.js"></script>
+    <script src="JS\Day9.js"></script>
+    <script src="JS\Day10.js"></script>
+    <script src="JS\Day11.js"></script>
+    <script src="JS\Day12.js"></script>
+    <script src="JS\Day13.js"></script>
+    <script src="JS\Day14.js"></script>
+    <script src="JS\Day15.js"></script>
+    <script src="JS\Day16.js"></script>
+    <script src="JS\Day17.js"></script>
+    <script src="JS\Day18.js"></script>
+    <script src="JS\Day19.js"></script>
+    <script src="JS\Day20.js"></script>
+    <script src="JS\Day21.js"></script>
+    <script src="JS\Day22.js"></script>
+    <script src="JS\Day23.js"></script>
+    <script src="JS\Day24.js"></script>
+    <script src="JS\Day25.js"></script>
 </head>
 
 <body>
+    <h1>🎄🎁Advent Of Code 2023🎁🎄</h1>
+    <h4>Interpretation of problems by FalserX</h4>
+
     <table>
         <tr>
-            <td><button type="button" name="btnQ1" onclick="runD1()">Run Day 1</button></td>
-            <td><label for="iD1FInputFile">Input file (Day 1) to resolve</label></td>
+            <th><span>Day</span></th> <!-- Header for day-->
+            <th><span></span></th> <!-- Header for button-->
+            <th><span>Input file</span></th> <!-- Header for input file-->
+            <th><span>Answer Part 1</span></th> <!-- Header for Response part 1-->
+            <th><span>Answer Part 2</span></th> <!-- Header for Response part 2-->
+        </tr>
+        <tr>
+            <td><span>1</span></td>
+            <td><button type="button" name="btnQ1" onclick="runD1()">Run</button></td>
             <td><input id="iD1FInputFile" name="iD1FInputFile" type="file" onchange="populateTextD1()" /></td>
-            <td><label for="iD11">Day 1.1 Response</label></td>
             <td><input id="iD11" name="iD11" type="text" readonly /></td>
-            <td><label for="iD12">Day 1.2 Response</label></td>
             <td><input id="iD12" name="iD12" type="text" readonly /></td>
         </tr>
         <tr>
-            <td><button type="button" name="btnQ2" onclick="runD2()">Run Day 2</button></td>
-            <td><label for="iD2FInputFile">Input file (Day 2) to resolve</label></td>
+            <td><span>2</span></td>
+            <td><button type="button" name="btnQ2" onclick="runD2()">Run</button></td>
             <td><input id="iD2FInputFile" name="iD2FInputFile" type="file" onchange="populateTextD2()" /></td>
-            <td><label for="iD21">Day 2.1 Response</label></td>
             <td><input id="iD21" name="iD21" type="text" readonly /></td>
-            <td><label for="iD22">Day 2.2 Response</label></td>
             <td><input id="iD22" name="iD22" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>3</span></td>
+            <td><button type="button" name="btnQ3" onclick="runD3()">Run</button></td>
+            <td><input id="iD3FInputFile" name="iD3FInputFile" type="file" onchange="populateTextD3()" /></td>
+            <td><input id="iD31" name="iD31" type="text" readonly /></td>
+            <td><input id="iD32" name="iD32" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>4</span></td>
+            <td><button type="button" name="btnQ4" onclick="runD4()">Run</button></td>
+            <td><input id="iD4FInputFile" name="iD4FInputFile" type="file" onchange="populateTextD4()" /></td>
+            <td><input id="iD41" name="iD41" type="text" readonly /></td>
+            <td><input id="iD42" name="iD42" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>5</span></td>
+            <td><button type="button" name="btnQ5" onclick="runD5()">Run</button></td>
+            <td><input id="iD5FInputFile" name="iD5FInputFile" type="file" onchange="populateTextD5()" /></td>
+            <td><input id="iD51" name="iD51" type="text" readonly /></td>
+            <td><input id="iD52" name="iD52" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>6</span></td>
+            <td><button type="button" name="btnQ6" onclick="runD6()">Run</button></td>
+            <td><input id="iD6FInputFile" name="iD6FInputFile" type="file" onchange="populateTextD6()" /></td>
+            <td><input id="iD61" name="iD61" type="text" readonly /></td>
+            <td><input id="iD62" name="iD62" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>7</span></td>
+            <td><button type="button" name="btnQ7" onclick="runD7()">Run</button></td>
+            <td><input id="iD7FInputFile" name="iD7FInputFile" type="file" onchange="populateTextD7()" /></td>
+            <td><input id="iD71" name="iD71" type="text" readonly /></td>
+            <td><input id="iD72" name="iD72" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>8</span></td>
+            <td><button type="button" name="btnQ8" onclick="runD8()">Run</button></td>
+            <td><input id="iD8FInputFile" name="iD8FInputFile" type="file" onchange="populateTextD8()" /></td>
+            <td><input id="iD81" name="iD81" type="text" readonly /></td>
+            <td><input id="iD82" name="iD82" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>9</span></td>
+            <td><button type="button" name="btnQ9" onclick="runD9()">Run</button></td>
+            <td><input id="iD9FInputFile" name="iD9FInputFile" type="file" onchange="populateTextD9()" /></td>
+            <td><input id="iD91" name="iD91" type="text" readonly /></td>
+            <td><input id="iD92" name="iD92" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>10</span></td>
+            <td><button type="button" name="btnQ10" onclick="runD10()">Run</button></td>
+            <td><input id="iD10FInputFile" name="iD10FInputFile" type="file" onchange="populateTextD10()" /></td>
+            <td><input id="iD101" name="iD101" type="text" readonly /></td>
+            <td><input id="iD102" name="iD102" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>11</span></td>
+            <td><button type="button" name="btnQ11" onclick="runD11()">Run</button></td>
+            <td><input id="iD11FInputFile" name="iD11FInputFile" type="file" onchange="populateTextD11()" /></td>
+            <td><input id="iD111" name="iD111" type="text" readonly /></td>
+            <td><input id="iD112" name="iD112" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>12</span></td>
+            <td><button type="button" name="btnQ12" onclick="runD12()">Run</button></td>
+            <td><input id="iD12FInputFile" name="iD12FInputFile" type="file" onchange="populateTextD12()" /></td>
+            <td><input id="iD121" name="iD121" type="text" readonly /></td>
+            <td><input id="iD122" name="iD122" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>13</span></td>
+            <td><button type="button" name="btnQ13" onclick="runD13()">Run</button></td>
+            <td><input id="iD13FInputFile" name="iD13FInputFile" type="file" onchange="populateTextD13()" /></td>
+            <td><input id="iD131" name="iD131" type="text" readonly /></td>
+            <td><input id="iD132" name="iD132" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>14</span></td>
+            <td><button type="button" name="btnQ14" onclick="runD14()">Run</button></td>
+            <td><input id="iD14FInputFile" name="iD14FInputFile" type="file" onchange="populateTextD14()" /></td>
+            <td><input id="iD141" name="iD141" type="text" readonly /></td>
+            <td><input id="iD142" name="iD142" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>15</span></td>
+            <td><button type="button" name="btnQ15" onclick="runD15()">Run</button></td>
+            <td><input id="iD15FInputFile" name="iD15FInputFile" type="file" onchange="populateTextD15()" /></td>
+            <td><input id="iD151" name="iD151" type="text" readonly /></td>
+            <td><input id="iD152" name="iD152" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>16</span></td>
+            <td><button type="button" name="btnQ16" onclick="runD16()">Run</button></td>
+            <td><input id="iD16FInputFile" name="iD16FInputFile" type="file" onchange="populateTextD16()" /></td>
+            <td><input id="iD161" name="iD161" type="text" readonly /></td>
+            <td><input id="iD162" name="iD162" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>17</span></td>
+            <td><button type="button" name="btnQ17" onclick="runD9()">Run</button></td>
+            <td><input id="iD17FInputFile" name="iD17FInputFile" type="file" onchange="populateTextD17()" /></td>
+            <td><input id="iD171" name="iD171" type="text" readonly /></td>
+            <td><input id="iD172" name="iD172" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>18</span></td>
+            <td><button type="button" name="btnQ18" onclick="runD9()">Run</button></td>
+            <td><input id="iD18FInputFile" name="iD18FInputFile" type="file" onchange="populateTextD18()" /></td>
+            <td><input id="iD181" name="iD181" type="text" readonly /></td>
+            <td><input id="iD182" name="iD182" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>19</span></td>
+            <td><button type="button" name="btnQ19" onclick="runD19()">Run</button></td>
+            <td><input id="iD19FInputFile" name="iD19FInputFile" type="file" onchange="populateTextD19()" /></td>
+            <td><input id="iD191" name="iD191" type="text" readonly /></td>
+            <td><input id="iD192" name="iD192" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>20</span></td>
+            <td><button type="button" name="btnQ20" onclick="runD20()">Run</button></td>
+            <td><input id="iD20FInputFile" name="iD20FInputFile" type="file" onchange="populateTextD20()" /></td>
+            <td><input id="iD201" name="iD201" type="text" readonly /></td>
+            <td><input id="iD202" name="iD202" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>21</span></td>
+            <td><button type="button" name="btnQ21" onclick="runD21()">Run</button></td>
+            <td><input id="iD21FInputFile" name="iD21FInputFile" type="file" onchange="populateTextD21()" /></td>
+            <td><input id="iD211" name="iD211" type="text" readonly /></td>
+            <td><input id="iD212" name="iD212" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>22</span></td>
+            <td><button type="button" name="btnQ22" onclick="runD22()">Run</button></td>
+            <td><input id="iD22FInputFile" name="iD22FInputFile" type="file" onchange="populateTextD22()" /></td>
+            <td><input id="iD221" name="iD221" type="text" readonly /></td>
+            <td><input id="iD222" name="iD222" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>23</span></td>
+            <td><button type="button" name="btnQ23" onclick="runD23()">Run</button></td>
+            <td><input id="iD23FInputFile" name="iD23FInputFile" type="file" onchange="populateTextD23()" /></td>
+            <td><input id="iD231" name="iD231" type="text" readonly /></td>
+            <td><input id="iD232" name="iD232" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>24</span></td>
+            <td><button type="button" name="btnQ24" onclick="runD24()">Run</button></td>
+            <td><input id="iD24FInputFile" name="iD24FInputFile" type="file" onchange="populateTextD24()" /></td>
+            <td><input id="iD241" name="iD241" type="text" readonly /></td>
+            <td><input id="iD242" name="iD242" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <td><span>25</span></td>
+            <td><button type="button" name="btnQ25" onclick="runD25()">Run</button></td>
+            <td><input id="iD25FInputFile" name="iD25FInputFile" type="file" onchange="populateTextD25()" /></td>
+            <td><input id="iD251" name="iD251" type="text" readonly /></td>
+            <td><input id="iD252" name="iD252" type="text" readonly /></td>
+        </tr>
+        <tr>
+            <th><span>Day</span></th> <!-- Header for day-->
+            <th><span></span></th> <!-- Header for button-->
+            <th><span>Input file</span></th> <!-- Header for input file-->
+            <th><span>Answer Part 1</span></th> <!-- Header for Response part 1-->
+            <th><span>Answer Part 2</span></th> <!-- Header for Response part 2-->
         </tr>
     </table>
 </body>
+<footer>
+    <a
+        href="https://www.freepik.com/free-vector/realistic-falling-white-snow-overlay-transparent-background-snowflakes-storm-layer_19393340.htm#query=snow%20png&position=0&from_view=keyword&track=ais&uuid=b83a3e0d-029f-4ff5-b706-570c08eb1b9c">Image
+        by svstudioart</a> on Freepik
+</footer>
 
 </html>
